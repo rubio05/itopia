@@ -1,0 +1,25 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 29, 2017, 9:55:20 AM
+    Author     : Rene
+*/
+
+.deployments li > a > i {
+    font-size: 16px;
+    margin-top: 3px;
+    padding: 10px;
+}
+
+.deployments li > a  {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+
+#site-visits {
+    min-height: 200px;
+}

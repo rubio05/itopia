@@ -1,0 +1,608 @@
+<header id="header" data-current-skin={{mactrl.currentSkin}} data-ng-include="'template/header-itopia.html'" data-ng-controller="headerCtrl as hctrl"></header>
+
+<section id="main">
+    <aside id="sidebar" data-ng-include="'template/sidebar-itopia.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.left === true }"></aside>
+
+    <aside id="chat" data-ng-include="'template/chat.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.right === true }"></aside>
+
+    <section id="content">
+
+        <div class="container">
+            <div class="block-header">
+                <h2>Dashboard</h2>
+
+                <ul class="actions">
+                    <li>
+                        <a href="">
+                            <i class="zmdi zmdi-trending-up"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="zmdi zmdi-check-all"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown" uib-dropdown>
+                        <a href="" uib-dropdown-toggle>
+                            <i class="zmdi zmdi-more-vert"></i>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li>
+                                <a href="">Refresh</a>
+                            </li>
+                            <li>
+                                <a href="">Manage Widgets</a>
+                            </li>
+                            <li>
+                                <a href="">Widgets Settings</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+            
+
+            <div class="mini-charts">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                       <!-- Contacts -->
+        <div class="card">
+            <div class="card-header ch-alt">
+                <h2>Itopia Inc</h2>
+                <ul class="actions">
+                    <li class="action-show" uib-dropdown>
+                        <a href="" uib-dropdown-toggle>
+                            <i class="zmdi zmdi-settings"></i>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body card-padding">
+                <div class="pmo-contact">        
+                    <ul>
+                        <li class="ng-binding"><i class="zmdi zmdi-phone"></i> 00971123456789</li>
+                        <li class="ng-binding"><i class="zmdi zmdi-email"></i> pepe@itopia.com</li>
+                        <li class="ng-binding"><i class="zmdi zmdi-facebook-box"></i> Pepe Garcia</li>
+                        <li>
+                            <i class="zmdi zmdi-pin"></i>
+                            <address class="m-b-0 ng-binding">
+                                44-46 Morningside Road,<br>
+                                Edinburgh,<br>
+                                Scotland
+                            </address>
+                        </li>
+                    </ul>
+                </div>
+                
+                <a class="pmo-map" href="">
+                    <img src="img/demo/map.png" alt="">
+                </a>
+            </div>
+        </div>
+                        
+                        <div class="card">
+                            <div class="card-header bgm-cyan">
+                                <h2>News</h2>
+                            </div>
+
+                            <div class="card-body card-padding">
+                                <div class="lv-body">
+
+                                    <a class="lv-item" href="" >
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" data-ng-src="img/itopia.png" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">@googlecloud is commning big for MSP</div>
+                                                <small class="lv-small">https://t.co/YhsjHGJnb...  <b>17 days ago</b> </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="lv-item" href="" >
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" data-ng-src="img/itopia.png" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">@googlecloud is commning big for MSP</div>
+                                                <small class="lv-small">https://t.co/YhsjHGJnb...  <b>17 days ago</b> </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="lv-item" href="" >
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <img class="lv-img-sm" data-ng-src="img/itopia.png" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">@googlecloud is commning big for MSP</div>
+                                                <small class="lv-small">https://t.co/YhsjHGJnb...  <b>17 days ago</b> </small>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>User status</h2>
+
+                                <ul class="actions">
+                                    <li class="dropdown action-show" uib-dropdown>
+                                        <a href="" uib-dropdown-toggle>
+                                            <i class="zmdi zmdi-more-vert"></i>
+                                        </a>
+
+                                        <div class=" pull-right">
+                                           
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="card-body card-padding">
+                                <div id="donut-chart" class="flot-chart-pie" data-pie-donut></div>
+                                <div class="flc-donut hidden-xs"></div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="card" data-ng-controller="recentpostCtrl as rpctrl">
+                            <div class="listview">
+                                <div class="lv-header">
+                                    E-mail Domains
+                                </div>
+                                <div class="lv-body">
+
+                                    <a class="lv-item" href="" >
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <i class="zmdi zmdi-dns"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">itopia.com</div>
+                                                <small class="lv-small"><b>Provider</b>: Google apps</small>
+                                                <small class="lv-small"><b>DNS Provider</b>: ns.206.awsdns-25.com</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="clearfix"></div>
+
+                                <a class="lv-footer" href="">View All</a>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="card" data-ng-controller="recentpostCtrl as rpctrl">
+                            <div class="listview">
+                                <div class="lv-header">
+                                    Recent Incidents
+                                </div>
+                                <div class="lv-body">
+
+                                    <a class="lv-item" href="" >
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <i class="zmdi zmdi-check"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Google Cloud Platform. (Solved)</div>
+                                                <small class="lv-small">2017/12/01: Deployment manager is experiencing internal failures </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="lv-item" href="" >
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <i class="zmdi zmdi-check"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Google Cloud Platform. (Solved)</div>
+                                                <small class="lv-small">2017/12/01: Deployment manager is experiencing internal failures </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="lv-item" href="" >
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <i class="zmdi zmdi-check"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lv-title">Google Cloud Platform. (Solved)</div>
+                                                <small class="lv-small">2017/12/01: Deployment manager is experiencing internal failures </small>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+
+                                <div class="clearfix"></div>
+
+                                <a class="lv-footer" href="">View All</a>
+                            </div>
+                        </div>
+                         
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <div id="pie-charts" class="dash-widget-item">
+                            <div class="bgm-lightblue">
+                                <div class="dash-widget-header">
+                                    <div class="dash-widget-title">Users</div>
+                                </div>
+
+                                <div class="clearfix"></div>
+
+                                <div class="text-center p-20 m-t-25">
+                                    <div class="easy-pie main-pie" data-percent="90" data-easypie-chart>
+                                        <div class="percent">90</div>
+                                        <div class="pie-title">Quote</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-t-20 p-b-20 text-center">
+                                <div class="easy-pie sub-pie-1" data-percent="73" data-easypie-chart>
+                                    <div class="percent">73</div>
+                                    <div class="pie-title">Workspaces</div>
+                                </div>
+                                <div class="easy-pie sub-pie-2" data-percent="27" data-easypie-chart>
+                                    <div class="percent">27</div>
+                                    <div class="pie-title">Inventory</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="mini-charts-item bgm-lightblue">
+                            <div class="clearfix">
+                                <div class="chart stats-line" data-sparkline-bar></div>
+                                <div class="count">
+                                    <small>Serves Online</small>
+                                    <h2>2</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mini-charts-item bgm-orange">
+                            <div class="clearfix">
+                                <div class="chart stats-bar-2" data-sparkline-bar></div>
+                                <div class="count">
+                                    <small>VPNs</small>
+                                    <h2>1</h2>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="site-visits" class="dash-widget-item bgm-teal">
+                            <div class="dash-widget-header">
+                                <div class="dash-widget-title" style="padding: 10px 20px;">Inventory</div>
+                            </div>
+
+                            <div class="p-20">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-6">
+                                            <small>Printers</small>
+                                            <h3 class="m-0 f-400">3</h3>
+                                            <br/>
+                                            <small>Network nodes</small>
+                                            <h3 class="m-0 f-400">7</h3>
+
+                                    </div>
+                                    <div class="col-sm-6 col-md-6">
+                                         <small>Applications</small>
+                                         <h3 class="m-0 f-400">47</h3>
+                                         <br/>
+                                         <small>Users</small>
+                                         <h3 class="m-0 f-400">51</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                       
+                    </div>
+
+                   
+                </div>
+            </div>
+
+
+            <div class="dash-widgets">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div id="site-visits" class="dash-widget-item bgm-teal">
+                            <div class="dash-widget-header">
+                                <div class="p-20">
+                                    <div class="dash-widget-visits" data-sparkline-line></div>
+                                </div>
+
+                                <div class="dash-widget-title">For the past 30 days</div>
+
+                                <ul class="actions actions-alt">
+                                    <li class="dropdown" uib-dropdown>
+                                        <a href="" uib-dropdown-toggle>
+                                            <i class="zmdi zmdi-more-vert"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="">Refresh</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Manage Widgets</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Widgets Settings</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="p-20">
+
+                                <small>Page Views</small>
+                                <h3 class="m-0 f-400">47,896,536</h3>
+
+                                <br/>
+
+                                <small>Site Visitors</small>
+                                <h3 class="m-0 f-400">24,456,799</h3>
+
+                                <br/>
+
+                                <small>Total Clicks</small>
+                                <h3 class="m-0 f-400">13,965</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="dash-widget-item bgm-lime">
+                            <div id="weather-widget" data-weather-widget></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div id="best-selling" class="dash-widget-item" data-ng-controller="bestsellingCtrl as wctrl">
+                            <div class="dash-widget-header">
+                                <div class="dash-widget-title">Best Sellings</div>
+                                <img src="img/widgets/alpha.jpg" alt="">
+                                <div class="main-item">
+                                    <small>Samsung Galaxy Alpha</small>
+                                    <h2>$799.99</h2>
+                                </div>
+                            </div>
+
+                            <div class="listview p-t-5">
+                                <a class="lv-item" href="" data-ng-repeat="w in wctrl.bsResult.list">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="lv-img-sm" data-ng-src="img/widgets/{{ w.img }}" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="lv-title">{{ w.name }}</div>
+                                            <small class="lv-small">{{ w.range }}</small>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="clearfix"></div>
+
+                                <a class="lv-footer" href="">
+                                    View All
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <!-- Recent Items -->
+                    <div class="card" data-ng-controller="recentitemCtrl as rictrl">
+                        <div class="card-header">
+                            <h2>Recent Items <small>Phasellus condimentum ipsum id auctor imperdie</small></h2>
+                            <ul class="actions">
+                                <li class="dropdown" uib-dropdown>
+                                    <a href="" uib-dropdown-toggle>
+                                        <i class="zmdi zmdi-more-vert"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li>
+                                            <a href="">Refresh</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Settings</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Other Settings</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-body m-t-0">
+                            <table class="table table-inner table-vmiddle">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th style="width: 60px">Price</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr data-ng-repeat="w in rictrl.riResult.list">
+                                    <td class="f-500 c-cyan">{{ w.id }}</td>
+                                    <td>{{ w.name }}</td>
+                                    <td class="f-500 c-cyan">{{ w.price }}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="recent-items-chart" class="flot-chart" data-line-chart></div>
+                    </div>
+
+                    <!-- Todo Lists -->
+                    <div id="todo-lists" data-ng-controller="todoCtrl as tctrl">
+                        <div class="tl-header">
+                            <h2>Todo Lists</h2>
+                            <small>Add, edit and manage your Todo Lists</small>
+
+                            <ul class="actions actions-alt">
+                                <li class="dropdown" uib-dropdown>
+                                    <a href="" uib-dropdown-toggle>
+                                        <i class="zmdi zmdi-more-vert"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li>
+                                            <a href="">Refresh</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Manage Widgets</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Widgets Settings</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="tl-body">
+                            <div id="add-tl-item" data-ng-class="{ 'toggled': tctrl.addTodoStat }" data-ng-click="tctrl.addTodoStat = true">
+                                <i class="add-new-item zmdi zmdi-plus" data-ng-click="tctrl.addTodo($event)"></i>
+
+                                <div class="add-tl-body">
+                                    <textarea placeholder="What you want to do..." data-ng-model="tctrl.todo"></textarea>
+
+                                    <div class="add-tl-actions">
+                                        <a class="zmdi zmdi-close" data-tl-action="dismiss" data-ng-click="tctrl.addTodoStat = false; $event.stopPropagation()"></a>
+                                        <a class="zmdi zmdi-check" data-tl-action="save" data-ng-click="tctrl.addTodoStat = false; $event.stopPropagation()"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="checkbox media" data-ng-repeat="w in tctrl.tdResult.list">
+                                <div class="pull-right">
+                                    <ul class="actions actions-alt">
+                                        <li class="dropdown" uib-dropdown>
+                                            <a href="" uib-dropdown-toggle>
+                                                <i class="zmdi zmdi-more-vert"></i>
+                                            </a>
+
+                                            <ul class="dropdown-menu dropdown-menu-right">
+                                                <li><a href="">Delete</a></li>
+                                                <li><a href="">Archive</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="media-body">
+                                    <label>
+                                        <input type="checkbox">
+                                        <i class="input-helper"></i>
+                                        <span>{{ w.todo }}</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <!-- Calendar -->
+                    <div id="calendar-widget" data-full-calendar></div>
+
+                    <!-- Recent Posts -->
+                    <div class="card" data-ng-controller="recentpostCtrl as rpctrl">
+                        <div class="card-header ch-alt m-b-20">
+                            <h2>Recent Posts <small>Phasellus condimentum ipsum id auctor imperdie</small></h2>
+                            <ul class="actions">
+                                <li>
+                                    <a href="">
+                                        <i class="zmdi zmdi-refresh-alt"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="zmdi zmdi-download"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown" uib-dropdown>
+                                    <a href="" uib-dropdown-toggle>
+                                        <i class="zmdi zmdi-more-vert"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li>
+                                            <a href="">Change Date Range</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Change Graph Type</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Other Settings</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <button class="btn bgm-cyan btn-float"><i class="zmdi zmdi-plus"></i></button>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="listview">
+
+                                <a class="lv-item" href="" data-ng-repeat="w in rpctrl.rpResult.list">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="lv-img-sm" data-ng-src="img/profile-pics/{{ w.img }}" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="lv-title">{{ w.user }}</div>
+                                            <small class="lv-small">{{ w.text }}</small>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="clearfix"></div>
+
+                                <a class="lv-footer" href="">View All</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<footer id="footer" data-ng-include="'template/footer.html'"></footer>

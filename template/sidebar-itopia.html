@@ -9,7 +9,6 @@
         </a>
 
         <ul class="main-menu deployments">
-            
             <li>
                 <a href=""><i class="zmdi zmdi-circle" style="color: green"></i> Itopia, Inc</a>
             </li>
@@ -20,7 +19,7 @@
                 <a href=""><i class="zmdi zmdi-circle" style="color: orange"></i>Big Design Inc.</a>
             </li>
             <li style="margin-left: 5px">
-                <a href=""><i class="zmdi zmdi-menu" ></i>All clients</a>
+                <a href=""><i class="zmdi zmdi-menu" ></i>All deployments</a>
             </li>
         </ul>
     </div>
@@ -30,11 +29,9 @@
         <li data-ui-sref-active="active">
             <a data-ui-sref="home" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-view-dashboard"></i> Dashboard</a>
         </li>
-        <li >
-            <a data-ui-sref="home" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-assignment-check"></i> Tasks</a>
-        </li>
+        
         <li class="sub-menu" data-ng-class="{ 'active toggled': mactrl.$state.includes('headers') }">
-            <a href="" toggle-submenu><i class="zmdi zmdi-card-travel"></i> Catalogs</a>
+            <a href="" toggle-submenu><i class="zmdi zmdi-card-travel"></i> Catalog</a>
 
             <ul>
                 <li><a data-ui-sref-active="active" data-ui-sref="headers.textual-menu" data-ng-click="mactrl.sidebarStat($event)">Users</a></li>
@@ -74,18 +71,15 @@
     
     
     <ul class="main-menu" >
-        
+        <li >
+            <a data-ui-sref="home" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-assignment-check"></i> Tasks</a>
+        </li>
         <li data-ui-sref-active="active">
-            <a data-ui-sref="calendar" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-calendar"></i> Insight</a>
+            <a data-ui-sref="calendar" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-calendar"></i> Insights</a>
         </li>
         <li >
             <a data-ui-sref="home" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-assignment-check"></i> Integrations</a>
         </li>
-        <li data-ui-sref-active="active">
-            <a data-ui-sref="calendar" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-calendar"></i> News</a>
-        </li>
-        <li data-ui-sref-active="active">
-            <a data-ui-sref="calendar" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-calendar"></i> FAQs</a>
-        </li>
+        
     </ul>
 </div>

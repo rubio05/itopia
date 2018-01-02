@@ -49,50 +49,89 @@
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
                        <!-- Contacts -->
-        <div class="card">
-            <div class="card-header ch-alt">
-                <h2>Itopia Inc (I10)</h2>
-                <ul class="actions">
-                    <li class="action-show" uib-dropdown>
-                        <a href="" uib-dropdown-toggle>
-                            <i class="zmdi zmdi-more-vert"></i>
-                        </a>
-                         <ul class="dropdown-menu dropdown-menu-right">
-                            <li>
-                                <a href="">Edit</a>
-                            </li>
-                            <li>
-                                <a href="">Settings</a>
-                            </li>
-                            <li>
-                                <a href="">Delete</a>
-                            </li>
-                        </ul>
+                        <div class="card">
+                            <div class="card-header ch-alt">
+                                <h2>Itopia Inc (I10)</h2>
+                                <ul class="actions">
+                                    <li class="action-show" uib-dropdown>
+                                        <a href="" uib-dropdown-toggle>
+                                            <i class="zmdi zmdi-more-vert"></i>
+                                        </a>
+                                         <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Delete</a>
+                                            </li>
+                                        </ul>
 
-                    </li>
-                </ul>
-            </div>
-            <div class="card-body card-padding">
-                <div class="pmo-contact">        
-                    <ul>
-                        <li class="ng-binding"><i class="zmdi zmdi-account"></i> Pepe Garcia</li>
-                        <li class="ng-binding"><i class="zmdi zmdi-phone"></i> 00971123456789</li>
-                        <li class="ng-binding"><i class="zmdi zmdi-email"></i> pepe@itopia.com</li>
-                        <li>
-                            <i class="zmdi zmdi-pin"></i>
-                            <address class="m-b-0 ng-binding">
-                                44-46 Morningside Road,<br>
-                                Edinburgh, Scotland
-                            </address>
-                        </li>
-                    </ul>
-                </div>
-                
-                <a class="pmo-map" href="">
-                    <img src="img/demo/map.png" alt="">
-                </a>
-            </div>
-        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body card-padding">
+                                <div class="pmo-contact">        
+                                    <ul>
+                                        <li class="ng-binding"><i class="zmdi zmdi-account"></i> Pepe Garcia</li>
+                                        <li class="ng-binding"><i class="zmdi zmdi-phone"></i> 00971123456789</li>
+                                        <li class="ng-binding"><i class="zmdi zmdi-email"></i> pepe@itopia.com</li>
+                                        <li>
+                                            <i class="zmdi zmdi-pin"></i>
+                                            <address class="m-b-0 ng-binding">
+                                                44-46 Morningside Road,<br>
+                                                Edinburgh, Scotland
+                                            </address>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <a class="pmo-map" href="">
+                                    <img src="img/demo/map.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                       
+                       <div class="card" data-ng-controller="recentpostCtrl as rpctrl">
+                            <div class="listview">
+                                <div class="lv-header">
+                                    Cloud Info
+                                </div>
+                                <div class="lv-body">
+
+                                    <a class="lv-item" href="" >
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <div class="lv-title">Suffix:</div>
+                                            </div>
+                                            <div class="pull-right">
+                                                <div class="lv-title">itopia</div>
+                                            </div>
+                                        </div>
+                                        <div class="media">
+                                            
+                                            <div class="pull-left">
+                                                <div class="lv-title">Zone:</div>
+                                            </div>
+                                            <div class="pull-right">
+                                                <div class="lv-title">us-east1-c</div>
+                                            </div>
+                                        </div>
+                                        <div class="media">
+                                            
+                                            <div class="pull-left">
+                                                <div class="lv-title">Internal IP Subnet: </div>
+                                            </div>
+                                            <div class="pull-right">
+                                                <div class="lv-title">10.142.0.0/20</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         
                         <div class="card">
                             <div class="card-header bgm-cyan">
@@ -149,17 +188,7 @@
                             <div class="card-header">
                                 <h2>User status</h2>
 
-                                <ul class="actions">
-                                    <li class="dropdown action-show" uib-dropdown>
-                                        <a href="" uib-dropdown-toggle>
-                                            <i class="zmdi zmdi-more-vert"></i>
-                                        </a>
-
-                                        <div class=" pull-right">
-                                           
-                                        </div>
-                                    </li>
-                                </ul>
+                               
                             </div>
 
                             <div class="card-body card-padding">

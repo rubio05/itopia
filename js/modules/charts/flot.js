@@ -424,7 +424,7 @@ materialAdmin
                     {data: 3, color: '#03A9F4', label: 'Online'},
                     {data: 11, color: '#c7c7c7', label: 'Offline'},
                     {data: 1, color: '#FFEB3B', label: 'Locked'},
-                    {data: 2, color: '#ff9800', label: 'Pending update'},
+                    {data: 2, color: '#ff9800', label: 'Pending creation'},
                 ];
 
                 /* Pie Chart */
